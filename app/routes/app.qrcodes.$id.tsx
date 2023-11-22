@@ -136,20 +136,6 @@ export default function QRCodeForm() {
     submit(data, { method: "post" });
   }
 
-  // const submit = useSubmit();
-  // function handleSave() {
-  //   const data = {
-  //     title: formState.title,
-  //     productId: formState.productId || "",
-  //     productVariantId: formState.productVariantId || "",
-  //     productHandle: formState.productHandle || "",
-  //     destination: formState.destination,
-  //   };
-
-  //   setCleanFormState({ ...formState });
-  //   submit(data, { method: "post" });
-  // }
-
   // Type guard to check if qrCode is of type QRCode
   function isQRCode(data: loaderData): data is SupplementalQRCode {
     return (data as SupplementalQRCode).id !== undefined;
