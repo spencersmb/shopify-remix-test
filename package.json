@@ -2,7 +2,7 @@
   "name": "remix-qr-test-app",
   "private": true,
   "scripts": {
-    "build": "remix build",
+    "build": "prisma generate && remix build",
     "predev": "prisma generate && prisma migrate deploy",
     "dev": "shopify app dev",
     "config:link": "shopify app config link",
