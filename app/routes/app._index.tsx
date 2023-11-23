@@ -73,7 +73,7 @@ const EmptyQRCodeState = ({ onAction }: any) => (
   <EmptyState
     heading="Create unique QR codes for your product"
     action={{
-      content: "Create QR code",
+      content: "Create QR code local",
       onAction,
     }}
     image="https://cdn.shopify.com/s/files/1/0262/4071/2726/files/emptystate-files.png"
@@ -93,7 +93,7 @@ export default function Index() {
 
   return (
     <Page>
-      <ui-title-bar title="QR codes">
+      <ui-title-bar title="QR codes local">
         <button variant="primary" onClick={() => navigate("/app/qrcodes/new")}>
           Create QR code
         </button>
