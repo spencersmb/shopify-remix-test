@@ -2,7 +2,7 @@
 
 name = "remix-qr-test-app"
 client_id = "90e98b6456f65eba1c983bdd603007ad"
-application_url = "https://visit-reef-suggestion-girlfriend.trycloudflare.com"
+application_url = "https://oscar-synthesis-clara-checkout.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://visit-reef-suggestion-girlfriend.trycloudflare.com/auth/callback",
-  "https://visit-reef-suggestion-girlfriend.trycloudflare.com/auth/shopify/callback",
-  "https://visit-reef-suggestion-girlfriend.trycloudflare.com/api/auth/callback",
-  "https://visit-reef-suggestion-girlfriend.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://oscar-synthesis-clara-checkout.trycloudflare.com/auth/callback",
+  "https://oscar-synthesis-clara-checkout.trycloudflare.com/auth/shopify/callback",
+  "https://oscar-synthesis-clara-checkout.trycloudflare.com/api/auth/callback",
+  "https://oscar-synthesis-clara-checkout.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]

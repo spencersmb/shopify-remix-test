@@ -11,5 +11,7 @@ node_modules
 database.sqlite
 
 .env
+.env.local
+.env.production
 package-lock.json
 yarn.lock
