@@ -1,10 +1,10 @@
 
-// import db from "../db.server";
+import db from "../db.server";
 
 export async function getVipPrograms(session: any, graphql: any) {
 
 
-  const vipPrograms = await prisma.vipProgram.findMany({
+  const vipPrograms = await db.vipProgram.findMany({
     where: { storeId: session.shop }, // this refers to the unique Shop Store ID that is passed from the authentication middleware
     orderBy: { id: "desc" },
   });
