@@ -4,11 +4,11 @@
   "scripts": {
     "build": "prisma generate && remix build",
     "predev": "npm run config:dev && dotenv -e .env.local -- prisma generate && dotenv -e .env.local -- prisma migrate deploy",
+    "dev": "NODE_ENV=development && dotenv -e .env.local -- shopify app dev",
     "staging": "node scripts/useStagingConfig.js && prisma migrate deploy && pnpm run build",
     "config:dev": "shopify app config use shopify.app.dev.toml",
     "config:staging": "shopify app config use shopify.app.staging.toml",
     "config:prod": "shopify app config use shopify.app.toml",
-    "dev": "NODE_ENV=development && dotenv -e .env.local -- shopify app dev",
     "config:link": "shopify app config link",
     "config:push": "shopify app config push",
     "generate": "shopify app generate",

@@ -31,7 +31,8 @@ import { authenticate } from "~/shopify.server";
 
 
 export async function loader({ request, params }: LoaderFunctionArgs) {
-  const { admin } = await authenticate.admin(request);
+  const { admin, session } = await authenticate.admin(request);
+  console.log('SESSION:', session)
 
   if (params.id === "new") {
     return json({

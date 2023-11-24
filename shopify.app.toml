@@ -2,19 +2,19 @@
 
 name = "remix-qr-test-app"
 client_id = "90e98b6456f65eba1c983bdd603007ad"
-application_url = "https://oscar-synthesis-clara-checkout.trycloudflare.com"
+application_url = "https://shopify-remix-test-app.vercel.app"
 embedded = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_products, read_customers, write_customers, read_discounts"
 
 [auth]
 redirect_urls = [
-  "https://oscar-synthesis-clara-checkout.trycloudflare.com/auth/callback",
-  "https://oscar-synthesis-clara-checkout.trycloudflare.com/auth/shopify/callback",
-  "https://oscar-synthesis-clara-checkout.trycloudflare.com/api/auth/callback",
-  "https://oscar-synthesis-clara-checkout.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://shopify-remix-test-app.vercel.app/auth/callback",
+  "https://shopify-remix-test-app.vercel.app/auth/shopify/callback",
+  "https://shopify-remix-test-app.vercel.app/api/auth/callback",
+  "https://shopify-remix-test-app.vercel.app/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
