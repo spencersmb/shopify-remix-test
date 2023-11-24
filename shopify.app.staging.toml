@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "remix-qr-test-app-staging"
+client_id = "e1df8f1b592f9f832ed71aecb0374dba"
+application_url = "https://stolen-careful-bruce-hdtv.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://stolen-careful-bruce-hdtv.trycloudflare.com/auth/callback",
+  "https://stolen-careful-bruce-hdtv.trycloudflare.com/auth/shopify/callback",
+  "https://stolen-careful-bruce-hdtv.trycloudflare.com/api/auth/callback",
+  "https://stolen-careful-bruce-hdtv.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "test-remix-app.myshopify.com"
