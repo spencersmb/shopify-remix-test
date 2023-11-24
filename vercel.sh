@@ -1,9 +1,13 @@
 #!/bin/bash
- 
-if [[ $VERCEL_GIT_COMMIT_REF == "staging"  ]] ; then 
+
+echo "Current branch: $VERCEL_GIT_COMMIT_REF"
+
+if [[ $VERCEL_GIT_COMMIT_REF == "staging" ]]; then 
   echo "This is our staging branch"
-  npm run staging
+  # Replace with a basic command for testing
+  echo "Running a basic command on staging"
 else 
   echo "This is not our main branch"
-  npm run build
+  # Replace with a basic command for testing
+  echo "Running a basic command on other branches"
 fi
