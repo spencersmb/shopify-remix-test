@@ -87,7 +87,6 @@ export default function Index() {
   // const actionData = useActionData<typeof action>();
   // const submit = useSubmit();
   const { qrCodes }: any = useLoaderData();
-  console.log('Loader data index page', qrCodes)
   const navigate = useNavigate();
 
 
