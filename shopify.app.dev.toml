@@ -2,7 +2,7 @@
 
 name = "remix-qr-test-app-dev"
 client_id = "a537fd340aadab9d2585077080961ec8"
-application_url = "https://stolen-careful-bruce-hdtv.trycloudflare.com"
+application_url = "https://jeffrey-liberal-support-gather.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://stolen-careful-bruce-hdtv.trycloudflare.com/auth/callback",
-  "https://stolen-careful-bruce-hdtv.trycloudflare.com/auth/shopify/callback",
-  "https://stolen-careful-bruce-hdtv.trycloudflare.com/api/auth/callback",
-  "https://stolen-careful-bruce-hdtv.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://jeffrey-liberal-support-gather.trycloudflare.com/auth/callback",
+  "https://jeffrey-liberal-support-gather.trycloudflare.com/auth/shopify/callback",
+  "https://jeffrey-liberal-support-gather.trycloudflare.com/api/auth/callback",
+  "https://jeffrey-liberal-support-gather.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
