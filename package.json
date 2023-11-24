@@ -4,7 +4,7 @@
   "scripts": {
     "build": "prisma generate && remix build",
     "predev": "npm run config:dev && dotenv -e .env.local -- prisma generate && dotenv -e .env.local -- prisma migrate deploy",
-    "staging": "node useStagingConfig.js && npm run build",
+    "staging": "node scripts/useStagingConfig.js && npm run build",
     "config:dev": "shopify app config use shopify.app.dev.toml",
     "config:staging": "shopify app config use shopify.app.staging.toml",
     "config:prod": "shopify app config use shopify.app.toml",
