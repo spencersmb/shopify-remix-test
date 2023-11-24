@@ -12,17 +12,49 @@ import {
   Thumbnail,
   Icon,
 } from "@shopify/polaris";
-import { authenticate } from "../shopify.server";
+import { authenticate, sessionStorage } from "../shopify.server";
 import { DiamondAlertMajor, ImageMajor } from "@shopify/polaris-icons";
 import type { QRCode } from "@prisma/client";
 import { getQRCodes } from "~/models/Qrcode.server";
+import { getVipPrograms } from "~/models/VipProgram.server";
+import type { Session } from "@shopify/shopify-api";
+interface SessionCustom extends Session {
+  shopId: string;
+}
+// type SessionCustom = Session &&
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const { admin, session } = await authenticate.admin(request);
+  console.log("session", session);
+  if (!(session as SessionCustom).shopId) {
+    const query = `
+    #graphql
+    query  {
+      shop {
+        name
+        id
+      }
+    }`;
+    const response = await admin.graphql(query);
+    const parsedResponse = await response.json();
+    console.log("parsedResponse: ", parsedResponse);
+
+    // Add custom data to the session
+    //@ts-ignore
+    session.shopId = parsedResponse.data.shop.id;
+
+    // Save the updated session
+    const update = await sessionStorage.storeSession(session);
+    console.log('update', update)
+  }
+
+  // console.log("session", session);
   const qrCodes = await getQRCodes(session.shop, admin.graphql);
+  const vipPrograms = await getVipPrograms(session, admin.graphql);
 
   return json({
     qrCodes,
+    vipPrograms
   });
 }
 
@@ -86,7 +118,8 @@ export default function Index() {
   // const nav = useNavigation();
   // const actionData = useActionData<typeof action>();
   // const submit = useSubmit();
-  const { qrCodes }: any = useLoaderData();
+  const { qrCodes, vipPrograms }: any = useLoaderData();
+  console.log("vipPrograms", vipPrograms)
   const navigate = useNavigate();
 
 
